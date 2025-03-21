@@ -1,12 +1,5 @@
-//
-//  FlutterMetaSdkMethods.swift
-//  flutter_meta_sdk
-//
-//  Created by Chandra Abdul Fattah on 25/07/22.
-//
-
 import Foundation
-import FBSDKCoreKit
+import FBSDKCoreKit          // These imports remain valid as the unified SDK re-exports them.
 import FBSDKCoreKit_Basics
 import FBAudienceNetwork
 
@@ -18,7 +11,6 @@ class FlutterMetaSdkMethods {
 
     static func setUserData(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         let arguments = call.arguments as? [String: Any] ?? [String: Any]()
-
         AppEvents.shared.setUserData(arguments["email"] as? String, forType: FBSDKAppEventUserDataType.email)
         AppEvents.shared.setUserData(arguments["firstName"] as? String, forType: FBSDKAppEventUserDataType.firstName)
         AppEvents.shared.setUserData(arguments["lastName"] as? String, forType: FBSDKAppEventUserDataType.lastName)
@@ -29,7 +21,6 @@ class FlutterMetaSdkMethods {
         AppEvents.shared.setUserData(arguments["state"] as? String, forType: FBSDKAppEventUserDataType.state)
         AppEvents.shared.setUserData(arguments["zip"] as? String, forType: FBSDKAppEventUserDataType.zip)
         AppEvents.shared.setUserData(arguments["country"] as? String, forType: FBSDKAppEventUserDataType.country)
-
         result(nil)
     }
 
@@ -61,7 +52,6 @@ class FlutterMetaSdkMethods {
         } else {
             AppEvents.shared.logEvent(AppEvents.Name(eventName), parameters: parameters)
         }
-
         result(nil)
     }
 
@@ -74,7 +64,6 @@ class FlutterMetaSdkMethods {
         } else {
             AppEvents.shared.logPushNotificationOpen(payload: payload!)
         }
-
         result(nil)
     }
 
@@ -95,9 +84,7 @@ class FlutterMetaSdkMethods {
         let modes = arguments["options"] as? [String] ?? []
         let state = arguments["state"] as? Int32 ?? 0
         let country = arguments["country"] as? Int32 ?? 0
-
         Settings.shared.setDataProcessingOptions(modes, country: country, state: state)
-
         result(nil)
     }
 
@@ -107,7 +94,6 @@ class FlutterMetaSdkMethods {
         let currency = arguments["currency"] as! String
         let parameters = arguments["parameters"] as? [AppEvents.ParameterName: Any] ?? [AppEvents.ParameterName: Any]()
         AppEvents.shared.logPurchase(amount: amount, currency: currency, parameters: parameters)
-
         result(nil)
     }
 
