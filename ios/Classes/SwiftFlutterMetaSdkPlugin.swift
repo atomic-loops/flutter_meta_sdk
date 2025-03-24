@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-import FBSDKCoreKit
+
 
 public class SwiftFlutterMetaSdkPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {

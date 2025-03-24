@@ -39,11 +39,11 @@ flutter:
       android:
         package: com.solusibejo.flutter_meta_sdk
         pluginClass: FlutterMetaSdkPlugin
-      ios:
-        pluginClass: FlutterMetaSdkPlugin
-      web:
-        pluginClass: FlutterMetaSdkWeb
-        fileName: flutter_meta_sdk_web.dart
+      # ios:
+      #   pluginClass: FlutterMetaSdkPlugin
+      # web:
+      #   pluginClass: FlutterMetaSdkWeb
+      #   fileName: flutter_meta_sdk_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

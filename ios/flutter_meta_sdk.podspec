@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   # Replace the deprecated FBSDKCoreKit with the new unified Facebook-iOS-SDK
   s.dependency 'Facebook-iOS-SDK'
   # Retain FBAudienceNetwork if your package uses it; Meta's instructions don’t require its removal.
-  s.dependency 'FBAudienceNetwork'
+  # s.dependency 'FBAudienceNetwork'
   
   s.platform = :ios, '10.0'
 

@@ -1,7 +1,6 @@
 import Foundation
-import FBSDKCoreKit          // These imports remain valid as the unified SDK re-exports them.
-import FBSDKCoreKit_Basics
-import FBAudienceNetwork
+import FacebookCore
+
 
 class FlutterMetaSdkMethods {
     static func clearUserData(result: @escaping FlutterResult) {
